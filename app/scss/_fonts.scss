@@ -1,4 +1,10 @@
-@import "_mixins/font-face";
+@font-face{
+    font-family: 'Roboto-Regular', sans-serif;
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+        font-weight: 400;
+        font-display: swap;//сразу системные шрифты
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+}
+
+
