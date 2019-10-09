@@ -44,8 +44,24 @@ $('.icon-th-large').on('click', function(){
 	
 });
 
-// фильтр продукции
-	var mixer = mixitup('.products__inner');	
+
+// .menu__btn
+ $('.menu__btn').on('click', function(){
+	$('.menu__list').slideToggle();
+ });
+
+$('.header__btn-menu').on('click', function(){
+	$('.header__box').toggleClass('active');
+ });
+
+
+
+
+ 
+
+
+// фильтр продукции !! писать ТОЛЬКО в конце кода
+	var mixer = mixitup('.products__inner-box');	
 	
 
 });
