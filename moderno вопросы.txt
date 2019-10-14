@@ -1,0 +1,14 @@
+в style.scss прописал product-page__items overflow-y: hidden; в main.js $('.icon-th-list').on('click', function() {
+        $('.products__item').addClass('list');
+        $('.product-page__items').css('maxHeight', '1150px');
+        $('.icon-th-list').addClass('active');
+        $('.icon-th-large').removeClass('active');
+
+    });
+
+    $('.icon-th-large').on('click', function() {
+        $('.products__item').removeClass('list');
+        $('.product-page__items').css('maxHeight', '');
+        $('.icon-th-large').addClass('active');
+        $('.icon-th-list').removeClass('active');
+    });

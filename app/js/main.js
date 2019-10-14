@@ -27,18 +27,48 @@ $(function() {
 		dots: true,
 		arrows:false,
 		slidesToShow: 4,
-		slidesToScroll: 2
+		slidesToScroll: 2,
+		responsive: [
+			{
+			  breakpoint: 1860,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				
+			  }
+			},
+			{
+			  breakpoint: 1415,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				
+			  }
+			},
+			{
+			  breakpoint: 960,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		  ]
 	});
 
 
 	//для new-items.html
 $('.icon-th-list').on('click', function(){
 	$('.product__item').addClass('list');
+	$('.product-page__items').css('maxHeight', '1150px');
 	$('.icon-th-list').addClass('active');
 	$('.icon-th-large').removeClass('active');
 });
 $('.icon-th-large').on('click', function(){
 	$('.product__item').removeClass('list');
+	$('.product-page__items').css('maxHeight', '');
 	$('.icon-th-large').addClass('active');
 	$('.icon-th-list').removeClass('active');
 	
